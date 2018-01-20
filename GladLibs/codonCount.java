@@ -3,9 +3,9 @@ package GladLibs;
 import java.util.HashMap;
 import edu.duke.FileResource;
 
-public class codonCount 
+public class CodonCount 
 {
-	public codonCount()
+	public CodonCount()
 	{
 		dnaCount = new HashMap<String, Integer>();
 	}
@@ -88,7 +88,7 @@ public class codonCount
 	
 	public static void main(String[] arg)
 	{
-		codonCount cc = new codonCount();
+		CodonCount cc = new CodonCount();
 		cc.tester();
 	}
 	
