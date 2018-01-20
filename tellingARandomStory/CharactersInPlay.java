@@ -47,14 +47,25 @@ public class CharactersInPlay
 		}
 	}
 	
+	public void charactersWithNumParts(int num1, int num2)
+	{
+		for(int i = 0; i != names.size(); i++)
+		{
+			if(counts.get(i) >= num1 && counts.get(i) <= num2)
+				System.out.println(names.get(i) + "\t" + counts.get(i));
+		}
+	}
+	
 	public void tester()
 	{
 		findAllCharacters();
 		System.out.println("All chracters are");
-		for(int i = 0; i != names.size(); i++)
-		{
-			System.out.println(names.get(i) + "\t" + counts.get(i));
-		}
+//		for(int i = 0; i != names.size(); i++)
+//		{
+//			System.out.println(names.get(i) + "\t" + counts.get(i));
+//		}
+		
+//		charactersWithNumParts(2, 4);
 		
 	}
 	
