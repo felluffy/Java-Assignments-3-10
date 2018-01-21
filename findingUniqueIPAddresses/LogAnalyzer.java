@@ -70,4 +70,33 @@ public class LogAnalyzer
     	 }
      }
      
+     public ArrayList<String> uniqueIPVisitsOnDay(String someday)
+     {
+    	 ArrayList<String> uniqueIPsDay = new ArrayList<String>();
+    	 for(LogEntry le: records)
+    	 {
+    		 if(le.getAccessTime().toString().contains(someday))
+    		 {
+    			 uniqueIPsDay.add(le.getIpAddress());
+    		 }
+    	 }
+    	 return uniqueIPsDay;
+     }
+     
+     public int countUniqueIPsInRange(int low, int high)
+     {
+    	 ArrayList<String> uniqueIPs = new ArrayList<String>();
+    	 //int sz = 0;
+    	 for(LogEntry le: records)
+    	 {
+    		 if(!uniqueIPs.contains(le.getIpAddress()) && le.getStatusCode() >= low && le.getStatusCode() <= high)
+    		 {
+    			 uniqueIPs.add(le.getIpAddress());
+    			 //System.out.println(uniqueIPs.get(sz++));
+    			 //sz++;
+    		 }
+    	 }
+    	 //return sz;
+    	 return uniqueIPs.size();
+     }
 }

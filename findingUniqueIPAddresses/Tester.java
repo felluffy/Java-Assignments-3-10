@@ -43,11 +43,29 @@ public class Tester
     	la.printAllHigherThanNum(high);
     }
     
+    public void testUniqueIPVisitsOnDay(String day)
+    {
+    	LogAnalyzer la = new LogAnalyzer();
+    	la.readFile("resources/weblog-short_log");
+    	System.out.println("Number of unique visits on " + day + " is " + la.uniqueIPVisitsOnDay(day).size());
+    }
+    
+    public void testCountUniqueIPsInRange()
+    {
+    	LogAnalyzer la = new LogAnalyzer();
+    	la.readFile("resources/short-test_log");
+    	System.out.println(la.countUniqueIPsInRange(200, 299));
+    }
+    
     public static void main(String[] args)
     {
     	Tester t = new Tester();
     	//t.testLogAnalyzer();
     	//t.testUniqueIP();
-    	t.testHigherThanStatus();
+    	//t.testHigherThanStatus();
+    	//t.testUniqueIPVisitsOnDay("Sep 14");
+    	//t.testUniqueIPVisitsOnDay("Sep 30");
+    	t.testCountUniqueIPsInRange();
+    	
     }
 }
