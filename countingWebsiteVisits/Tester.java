@@ -64,6 +64,14 @@ public class Tester
     	System.out.println(la.countVisitsPerIP());
     }
     
+    public void testMostNumberVisitsByIP()
+    {
+    	LogAnalyzer la = new LogAnalyzer();
+    	la.readFile("resources/weblog3-short_log");
+    	HashMap<String, Integer> counts = la.countVisitsPerIP();
+    	System.out.println(la.mostNumberVisitsByIP(counts));
+    }
+    
     public static void main(String[] args)
     {
     	Tester t = new Tester();
@@ -73,7 +81,8 @@ public class Tester
     	//t.testUniqueIPVisitsOnDay("Sep 14");
     	//t.testUniqueIPVisitsOnDay("Sep 30");
     	//t.testCountUniqueIPsInRange();
-    	t.testCountVisitsPerIP();
+    	//t.testCountVisitsPerIP();
+    	t.testMostNumberVisitsByIP();
     	
     }
 }

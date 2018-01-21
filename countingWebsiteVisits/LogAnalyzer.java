@@ -115,4 +115,15 @@ public class LogAnalyzer
     	 }
     	 return counts;
      }
+     
+     public int mostNumberVisitsByIP(HashMap<String, Integer> counts)
+     {
+    	 int max = 0;
+    	 for(String ip: counts.keySet())
+    	 {
+    		 if(counts.get(ip) > max)
+    			 max = counts.get(ip);
+    	 }
+    	 return max;
+     }
 }
