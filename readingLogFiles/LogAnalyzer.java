@@ -16,12 +16,26 @@ public class LogAnalyzer
      
      public LogAnalyzer() 
      {
-         // complete constructor
+         records = new ArrayList<LogEntry>();
      }
         
      public void readFile(String filename) 
      {
          // complete method
+    	 FileResource fr;
+    	 try
+    	 {
+    		 fr = new FileResource(filename);
+    	 }
+    	 catch(Exception e)
+    	 {
+    		 System.err.println("Couldn't find specific file from relative path");
+    		 fr = new FileResource();
+    	 }
+    	 for(String lines: fr.lines())
+    	 {
+    		 records.add(WebLogParser.parseEntry(lines));
+    	 }
      }
         
      public void printAll() 

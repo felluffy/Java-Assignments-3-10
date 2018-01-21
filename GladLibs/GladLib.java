@@ -89,7 +89,7 @@ public class GladLib
 		else if(myMap.containsKey(label))
 		{
 			if(!consideredLists.contains(label))
-			consideredLists.add(label);
+				consideredLists.add(label);
 			return randomFrom(myMap.get(label));
 		}
 		else
@@ -107,10 +107,8 @@ public class GladLib
 		type = type.trim();
 		String prefix = w.substring(0,first);
 		String suffix = w.substring(last+1);
-//		String sub = getSubstitute(w.substring(first+1,last));
 		String sub = getSubstitute(type);
-//		if(!consideredLists.contains(type))
-//			consideredLists.add(type);
+
 		return prefix+sub+suffix;
 	}
 	
@@ -179,7 +177,7 @@ public class GladLib
 		for(String s: this.consideredLists)
 		{
 			total += myMap.get(s).size();
-			System.out.println(s);
+//			System.out.println(s);
 		}
 //		System.out.println();
 //		for(String s: myMap.keySet())

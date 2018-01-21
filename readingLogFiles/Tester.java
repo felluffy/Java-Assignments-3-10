@@ -21,6 +21,15 @@ public class Tester
     
     public void testLogAnalyzer() 
     {
-        // complete method
+    	LogAnalyzer la = new LogAnalyzer();
+    	//String fl = "E:/eclipse/workspace/Assignments 3-10/src/readingLogFiles/";
+    	la.readFile("resources/short-test_log");
+    	la.printAll();
+    }
+    
+    public static void main(String[] args)
+    {
+    	Tester t = new Tester();
+    	t.testLogAnalyzer();
     }
 }

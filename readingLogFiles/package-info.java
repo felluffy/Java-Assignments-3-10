@@ -2,7 +2,7 @@
  * 
  */
 /**
- * @author Asus
+ * @author felluffy
  *
  */
 package readingLogFiles;
