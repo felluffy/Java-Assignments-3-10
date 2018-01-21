@@ -27,9 +27,27 @@ public class Tester
     	la.printAll();
     }
     
+    public void testUniqueIP()
+    {
+    	LogAnalyzer la = new LogAnalyzer();
+    	la.readFile("resources/short-test_log");
+    	System.out.println("Number of unique ips: " + la.countUniqueIPs());
+    }
+    
+    public void testHigherThanStatus()
+    {
+    	int high = 300;
+    	LogAnalyzer la = new LogAnalyzer();
+    	la.readFile("resources/short-test_log");
+    	System.out.println("Entries that have status codes higher than " + high + " are: ");
+    	la.printAllHigherThanNum(high);
+    }
+    
     public static void main(String[] args)
     {
     	Tester t = new Tester();
-    	t.testLogAnalyzer();
+    	//t.testLogAnalyzer();
+    	//t.testUniqueIP();
+    	t.testHigherThanStatus();
     }
 }

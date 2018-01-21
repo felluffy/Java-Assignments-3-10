@@ -59,4 +59,15 @@ public class LogAnalyzer
     	 return uniqueIPs.size();
      }
      
+     public void printAllHigherThanNum(int num)
+     {
+    	 for(LogEntry le: records)
+    	 {
+    		 if(le.getStatusCode() > num)
+    		 {
+    			 System.out.println(le.toString());
+    		 }
+    	 }
+     }
+     
 }
