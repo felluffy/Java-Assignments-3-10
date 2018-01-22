@@ -1,4 +1,4 @@
-package unknownkeylength;
+package unknownlanguage;
 
 import edu.duke.*;
 import java.util.*;

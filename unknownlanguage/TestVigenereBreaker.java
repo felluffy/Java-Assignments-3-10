@@ -1,4 +1,4 @@
-package unknownkeylength;
+package unknownlanguage;
 
 public class TestVigenereBreaker {
 
